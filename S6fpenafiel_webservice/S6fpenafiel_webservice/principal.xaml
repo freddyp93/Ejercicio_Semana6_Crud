@@ -11,16 +11,12 @@
         <Label x:Name="lbltexto" Text=""/>
         
         <!--creo un boton-->
-        <Button Text="Consultar"
+        <!--<Button Text="Consultar"
                 x:Name="btnGet"
-                Clicked="btnGet_Clicked"/>
-        
-        <!--Creo un boton para registrar datos-->
-        <Button Text="Registar"
-                x:Name="btnregistrar"
-                Clicked="btnregistrar_Clicked"/>
+                Clicked="btnGet_Clicked"/>-->
+       
 
-        <ListView x:Name="MyListView">
+        <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -33,6 +29,11 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <!--Creo un boton para registrar datos-->
+        <Button Text="Registar"
+                x:Name="btnregistrar"
+                Clicked="btnregistrar_Clicked"/>
 
     </StackLayout>
 </ContentPage>
