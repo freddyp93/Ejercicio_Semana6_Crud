@@ -19,7 +19,7 @@ namespace S6fpenafiel_webservice
         //declaro la variable Url y le paso la direccion de
         //mi web service
         //http//direccionIpV4 para la conexion
-        private const string Url = "http://172.28.80.1/moviles/post.php";
+        private const string Url = "http://172.21.208.1/moviles/post.php";
         private readonly HttpClient client = new HttpClient();
         //accedo a la clase datos para obtener los campos de la tabla
         private ObservableCollection<S6fpenafiel_webservice.WS.Datos> _post;
@@ -29,6 +29,7 @@ namespace S6fpenafiel_webservice
         public principal()
         {
             InitializeComponent();
+           
         }
 
         private async void btnGet_Clicked(object sender, EventArgs e)
@@ -54,6 +55,14 @@ namespace S6fpenafiel_webservice
 
             MyListView.ItemsSource = _post;
 
+        }
+
+        private void btnregistrar_Clicked(object sender, EventArgs e)
+        {
+            //codigo para navegacion entre ventanas
+            //desde la ventana principal hasta la navegacion registro
+            //desde el boton registro
+            Navigation.PushAsync(new Registro());
         }
     }
 }

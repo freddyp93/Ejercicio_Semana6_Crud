@@ -11,7 +11,8 @@ namespace S6fpenafiel_webservice
             InitializeComponent();
 
             //pagina desde la que va a iniciar la aplicacion
-            MainPage = new principal();
+            //habilito la navegacion de la ventana
+            MainPage = new NavigationPage(new principal());
         }
 
         protected override void OnStart()

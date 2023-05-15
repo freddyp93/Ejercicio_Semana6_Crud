@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S6fpenafiel_webservice.Registro"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="REGISTRO DE USUARIOS" HorizontalTextAlignment="Center" FontSize="20"/>
+            
+            <!--ingreso de datos para registro de nuevos usuarios-->
+            <Entry x:Name="txtCodigo" Placeholder="Ingrese el codigo" Keyboard="Numeric"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre" />
+            <Entry x:Name="txtApellido" Placeholder="Ingrese el apellido"/>
+            <Entry x:Name="txtEdad" Placeholder="Ingrese la edad" Keyboard="Numeric"/>
+            
+            <!--creo un grid para el boton ingresar y para el boton salir-->
+            <Grid>
+                <!--defino las filas del grid-->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!--defino las columnas del grid-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!--agrego los elementos del grid-->
+                <Button x:Name="btnInsertar" Text="INSERTAR" Clicked="btnInsertar_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="btnSalir" Text="REGRESAR" Clicked="btnSalir_Clicked" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
