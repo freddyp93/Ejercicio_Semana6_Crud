@@ -84,6 +84,11 @@ namespace S6fpenafiel_webservice
             //codigo para navegacion entre ventanas
             //desde la ventana principal hasta la navegacion registro
             //desde el boton registro
+
+            //alerta Toast (mensaje superpuesto)
+            var mensaje = "BIENVENIDO";
+            DependencyService.Get<mensaje>().longAlert(mensaje);
+            
             Navigation.PushAsync(new Registro());
         }
 
